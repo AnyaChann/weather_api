@@ -35,8 +35,8 @@ A simple command-line tool written in Dart that fetches real-time weather inform
 1. **Clone this repo**:
 
    ```bash
-   git clone https://github.com/your-username/weather_cli_dart.git
-   cd weather_cli_dart
+   git clone https://github.com/AnyaChann/weather_api.git
+   cd weather_api
    ```
 
 2. **Install Dart SDK** (if not yet):
@@ -48,7 +48,7 @@ A simple command-line tool written in Dart that fetches real-time weather inform
    Open `weather_api.dart` and replace:
 
    ```dart
-   final apiKey = 'your_api_key_here';
+   const String apiKey = 'your_api_key_here';
    ```
 
 4. **Run the app**:
@@ -91,20 +91,24 @@ weather_cli_dart/
 ## 🧠 Technical Highlights
 
 ### ✅ Async API Request
+
 - Uses `http` package and `async/await`
 - Fast and non-blocking
 - Tracks request duration with `DateTime.now()`
 
 ### 🔄 Simulated Sync Request
+
 - Uses `HttpClient` to mimic sync behavior
 - Adds artificial delay with `Future.delayed`
 - Demonstrates difference in flow control
 
 ### 🔍 JSON Handling
+
 - Parses JSON using `dart:convert`
 - Extracts `weather`, `main`, `wind`, and `dt` fields
 
 ### ⚠️ Error Handling
+
 - Handles:
   - `401 Unauthorized` → Invalid API key
   - `404 Not Found` → Invalid city
